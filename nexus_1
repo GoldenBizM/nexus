@@ -16,3 +16,5 @@ echo "Установка Nexus CLI..."
 curl https://cli.nexus.xyz/ | sh
 
 echo "Установка завершена!"
+
+exit
