@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Выход при ошибке
+set -e
+
+# Обновление системы
+echo "Обновление списка пакетов..."
+sudo apt update && sudo apt upgrade -y
+
+# Установка необходимых пакетов
+echo "Установка зависимостей..."
+sudo apt install -y build-essential pkg-config libssl-dev git-all
+
+# Установка Nexus CLI
+echo "Установка Nexus CLI..."
+curl https://cli.nexus.xyz/ | sh
+
+echo "Установка завершена!"
